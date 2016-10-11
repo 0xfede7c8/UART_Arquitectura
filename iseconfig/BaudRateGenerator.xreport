@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-10-06T17:46:45</DateModified>
+  <DateModified>2016-10-11T13:32:21</DateModified>
   <ModuleName>BaudRateGenerator</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/juanso/dev/xilinx/UART_Arquitectura/iseconfig/BaudRateGenerator.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/juanso/dev/xilinx/UART_Arquitectura</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/juanso/dev/xilinx/UART_Arquitectura/</ImplementationReportsDirectory>
   <DateInitialized>2016-10-06T17:46:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
