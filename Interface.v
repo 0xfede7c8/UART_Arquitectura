@@ -73,15 +73,16 @@ module Interface(input clk, input reset, wire [7:0] d_in, wire rx_done, wire tx_
 				end
 				3: begin
 					B = d_in;
+					#1;
 					d_out = d_in_alu;
-					/*if(tx_done) //tx done tiene que estar para transmitir
+					if(tx_done) //tx done tiene que estar para transmitir
 						begin
 							tx_start = 1; //mando un pulso a la uart para que arranque a transmitir
 							#1;
 							tx_start = 0;
 							next_state = 0;
 						end
-					else next_state = 3;*/
+					else next_state = 3;
 					end
 				default:; // estado invalido
 			endcase
