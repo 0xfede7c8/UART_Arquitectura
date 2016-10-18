@@ -12,8 +12,8 @@ module RX
 	output reg [7:0] d_out,
 	output reg rx_done);
 	
-	reg [4:0] state = stateA;
-	reg [4:0] next_state = stateA;
+	integer state = stateA;
+	integer next_state = stateA;
 	
 	reg tick_enable = 0;
 	integer count = 0;
@@ -25,7 +25,7 @@ module RX
 		state = next_state;
 	end
 	
-	always@*
+	always@(posedge clk)
 	begin
 		case(state)
 			//el estado A espera por el bit de start
@@ -53,7 +53,7 @@ module RX
 		endcase
 	end
 	
-	always@*
+	always@(posedge clk)
 	begin
 		case(state)
 			//en el estado A, se deshabilita el contador y rx_done se pone en 0
@@ -82,8 +82,8 @@ module RX
 				rst_count = 1;
 				if(count == 16)
 				begin
-					d_out = d_out<<1;
-					d_out[0] = rx;
+					d_out = d_out>>1;
+					d_out[7] = rx;
 					bits_count = bits_count + 1;
 					rst_count = 0;
 				end

@@ -18,7 +18,7 @@ module TX
 	
 	reg tick_enable = 0;
 	integer count = 0;
-	integer rst_count = 1;
+	reg rst_count = 1;
 	integer bit_count = 0;
    reg [7:0] d_aux;
 	
@@ -28,7 +28,7 @@ module TX
 		state=next_state;
 	end
 
-    always@*
+    always@(posedge clk)
     begin
         case(state)
             stateA:
@@ -49,45 +49,48 @@ module TX
         endcase
     end
 
-    always@*
+    always@(posedge clk)
     begin
         case(state)
             stateA:
             begin
                 tx = 1;
                 tx_done = 0;
-                count = 0;
+                rst_count = 0;
 					 tick_enable = 0;
             end
             stateB:
             begin
-					 tick_enable = 1;
-                if(count == 16)
-                begin
-                    tx = 0;
-                    d_aux = d_in;
-						  bit_count = bit_count + 1;
-						  count = 0;
-                end
+					rst_count = 1;
+					tick_enable = 1;
+					if(count == 16)
+					begin
+					  tx = 0;
+					  d_aux = d_in;
+					  bit_count = bit_count + 1;
+					  rst_count = 0;
+					end
             end
             stateC:
             begin
-                if(count == 16)
-                begin
-                    tx = d_aux[7];
-                    d_aux = d_aux << 1;
-                    bit_count = bit_count + 1;
-                    count = 0;
-                end
+					rst_count = 1;
+					if(count == 16)
+					begin
+					  tx = d_aux[0];
+					  d_aux = d_aux >> 1;
+					  bit_count = bit_count + 1;
+					  rst_count = 0;
+					end
             end
             stateD:
-            begin
-                if(count == 16)
-                begin
-                    tx = 1;
-						  bit_count = bit_count + 1;
-                    count = 0;
-                end
+				begin
+					rst_count = 1;
+					if(count == 16)
+					begin
+						tx = 1;
+						bit_count = bit_count + 1;
+						rst_count = 0;
+					end
             end
             stateE:
             begin
@@ -101,7 +104,7 @@ module TX
     end
                 
                 
-    always@(posedge baud_rate or negedge rst_count)
+always@(posedge baud_rate or negedge rst_count)
     begin
 		if(rst_count == 0) count = 0;
 		else
