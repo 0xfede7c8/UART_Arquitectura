@@ -55,12 +55,13 @@ module TX
             stateA:
             begin
                 tx = 1;
-                tx_done = 0;
+                tx_done = 1;
                 rst_count = 0;
 					 tick_enable = 0;
             end
             stateB:
             begin
+					tx_done = 0;
 					rst_count = 1;
 					tick_enable = 1;
 					if(count == 16)

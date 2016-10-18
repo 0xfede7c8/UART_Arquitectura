@@ -47,7 +47,7 @@ module testTX;
 	
 	always@(tx_done)
 	begin
-		if(tx_done == 1) tx_start = 0;
+		if(tx_done == 1) tx_start = 1;
 	end
 	always
 	begin
