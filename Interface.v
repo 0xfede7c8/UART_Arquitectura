@@ -6,7 +6,7 @@ datos desde la pc y volver a enviar el resultado.*/
 
 
 
-module Interface(input clk, input reset, wire [7:0] d_in, wire rx_done, wire tx_done , wire [7:0] d_in_alu,
+module Interface(input clk, input reset, input [7:0] d_in, input rx_done, input tx_done , input [7:0] d_in_alu,
 					  output reg [7:0] d_out, output reg tx_start, output reg [7:0] A, output reg [7:0] B, output reg [7:0] opcode );
 
 	//Registro operandos (A y B) y el codigo de operacion
