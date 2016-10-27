@@ -26,10 +26,6 @@ module ConcatenadorNumeros
 	
 	reg flag_fin_carga; 		//flag que indica cuando se terminaron de cargar datos
 	
-	reg flag_pulso_wr_enable = 0;	//flags para mandar pulsos
-	reg flag_pulso_rd_enable = 0;
-	reg flag_pulso_reset_fifo = 0;
-	reg flag_pulso_done = 0;
 	reg flag_procesando = 0; //si estoy haciendo la cuenta
 	reg flag_dato_nuevo = 0; //flag para el estado B de ponderacion de numeros
 	
@@ -55,14 +51,26 @@ module ConcatenadorNumeros
 		);
 		
 	/*RESET Y NEXT STATE*/
+	
+	reg [2:0] res_state = 0;
+	
 	always@(posedge clk)
 		begin
-			if (!reset) 
+			if(res_state == 0)
 				begin
-					next_state <= stateA;
-					flag_pulso_reset_fifo <= 1;
+				if (!reset) 
+					begin
+						next_state <= stateA;
+						fifo_n_reset <= 0;
+						res_state <= 1;
+					end
+				else state <= next_state;
 				end
-			else state <= next_state;
+			else 
+				begin
+				fifo_n_reset <= 1;
+				res_state <= 0;
+				end
 		end
 		
 	/*CAMBIO DE ESTADOS*/
@@ -86,31 +94,60 @@ module ConcatenadorNumeros
 		
 /*--------------------CARGA DE NUMEROS----------------------*/	
 		
-	always@(posedge num_ready)
+	reg [2:0] num_ready_state = 0;	
+	
+	always@(posedge clk)
+	begin
+		if(num_ready_state == 0)
 		begin
-			case(state)
-			stateA:
+			if(state == stateA)
+			begin
+				if(num_ready)
+					begin
+						fifo_data_in <= dato;
+						fifo_wr_en = 1;
+						num_ready_state = 1;
+					end
+			end
+		end
+		else begin
+			if(num_ready == 0) 
 				begin
-					fifo_data_in <= dato;
-					flag_pulso_wr_enable <= 1; //mando pulso para escribir en fifo
+				num_ready_state = 0;
+				fifo_wr_en = 0;
 				end
-			endcase
+		end
 		end
 		
 /*--------PROCESAMIENTO DE NUMEROS-------------------------*/
 /*Primer always me extrae los numeros de la fifo*/
 
+	reg [2:0] rd_en_state = 0;
+
 	always@(posedge clk)
 		begin
-			if(state == stateB)	//si estoy procesando
+			if(rd_en_state == 0)
 				begin
-					if(!fifo_empty)	//y quedan datos
-						begin
-							flag_pulso_rd_enable <= 1; //saca el dato de la fifo
-						end
-					else flag_procesando <= 0;
+				if(state == stateB)
+					begin
+						if(!fifo_empty)
+							begin
+							fifo_rd_en <= 1;
+							rd_en_state <= 1;
+							end
+					end
 				end
-			
+			if(rd_en_state == 1) 
+					begin
+					rd_en_state <= 2;
+					fifo_rd_en <= 0;
+					flag_dato_nuevo <= 1;
+					end
+			if(rd_en_state == 2) 
+				begin
+				flag_dato_nuevo <= 0;
+				rd_en_state <= 0;
+				end
 		end
 		
 /*Segundo always calcula el resultado ponderando los valores*/
@@ -126,7 +163,6 @@ module ConcatenadorNumeros
 					end
 					result_tmp = result_tmp + fifo_data_out*aux;
 					//result_tmp <= result_tmp + fifo_data_out*(10**fifo_data_count); //la magia
-					flag_dato_nuevo = 0;
 				end
 			if(state == stateD) result_tmp = 0;	
 		end
@@ -134,74 +170,24 @@ module ConcatenadorNumeros
 
 /*---------------------Envio de resultado------*/
 
+	reg [2:0] done_state = 0;
+
 	always@(posedge clk)
 		begin
-			if(state == stateC)
+			if(done_state == 0)
+			begin
+				if(state == stateC)
+					begin
+						done_state <= 1;
+						resultado <= result_tmp;
+						done <= 1;
+					end
+			end
+			else
 				begin
-					resultado <= result_tmp;
-					flag_pulso_done = 1;
+				done_state <= 0;
+				done <= 0;
 				end
 		end
 		
-		
-		
-
-		
-/*--------MANDA PULSOS----------*/	
-	always@(posedge clk)
-		begin
-			/*wr_enable*/
-			if(flag_pulso_wr_enable == 1)
-			begin
-				if(fifo_wr_en == 0) fifo_wr_en <= 1;
-				else 
-					begin
-						fifo_wr_en <= 0;
-						flag_pulso_wr_enable <=0;
-					end
-			end
-			
-			/*rd_enable*/
-			if(flag_pulso_rd_enable == 1)
-			begin
-				if(fifo_rd_en == 0) 
-					begin
-						fifo_rd_en <= 1;
-
-					end
-				else 
-					begin
-						fifo_rd_en <= 0;
-						flag_pulso_rd_enable <=0;
-						flag_dato_nuevo <= 1;
-					end
-			end
-			
-			/*reset fifo*/
-			if(flag_pulso_reset_fifo == 1)
-			begin
-				if(fifo_n_reset == 1) fifo_n_reset <= 0;
-				else 
-					begin
-						fifo_n_reset <= 1;
-						flag_pulso_reset_fifo <= 0;
-					end
-			end
-			
-			
-			/*pulso done*/
-			if(flag_pulso_done == 1)
-			begin
-				if(done == 0) done <= 1;
-				else 
-					begin
-						done <= 0;
-						flag_pulso_done <= 0;
-					end
-			end
-		end
-		
-
-	
-
 endmodule
