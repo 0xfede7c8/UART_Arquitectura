@@ -36,15 +36,15 @@ module testInterface;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		reset = 0;
+		reset = 1;
 		d_in = 0;
 		rx_done = 0;
 		tx_done = 0;
 
 		#1;
-		reset = 1;
-		#2;
 		reset = 0;
+		#2;
+		reset = 1;
 		// Wait 100 ns for global reset to finish
 		#20;
         

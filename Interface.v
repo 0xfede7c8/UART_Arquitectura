@@ -54,9 +54,9 @@ module Interface
 												.done(concatenador_done));
 
 	//Un reset sincronizado con el clock y el cambio de estado
-	always@(posedge clk or posedge reset)
+	always@(posedge clk or negedge reset)
 	begin
-		if (reset) state = stateA;
+		if (reset == 0) state = stateA;
 		else state = next_state;
 	end
 	
