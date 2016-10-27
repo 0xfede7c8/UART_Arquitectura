@@ -135,6 +135,7 @@ module ConcatenadorNumeros
 							fifo_rd_en <= 1;
 							rd_en_state <= 1;
 							end
+						else flag_procesando <= 0;		//cambio flag de procesamiento de datos
 					end
 				end
 			if(rd_en_state == 1) 
