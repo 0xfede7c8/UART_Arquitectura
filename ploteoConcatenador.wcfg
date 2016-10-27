@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/fede/DatosWindows/Facultad/Arquitectura de Computadoras/WorkspaceXilinxIse/UART/UART_Arquitectura/testConcat_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testConcat" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/testConcat/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/dato" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dato[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/num_ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">num_ready</obj_property>
+      <obj_property name="ObjectShortName">num_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/fin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fin</obj_property>
+      <obj_property name="ObjectShortName">fin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/flag_pulso_wr_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flag_pulso_wr_enable</obj_property>
+      <obj_property name="ObjectShortName">flag_pulso_wr_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/wr_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo_wr_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_wr_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/flag_pulso_rd_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flag_pulso_rd_enable</obj_property>
+      <obj_property name="ObjectShortName">flag_pulso_rd_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/flag_pulso_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flag_pulso_done</obj_property>
+      <obj_property name="ObjectShortName">flag_pulso_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo_rd_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_rd_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/rd_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/flag_procesando" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flag_procesando</obj_property>
+      <obj_property name="ObjectShortName">flag_procesando</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/flag_dato_nuevo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flag_dato_nuevo</obj_property>
+      <obj_property name="ObjectShortName">flag_dato_nuevo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/data_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/flag_pulso_reset_fifo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flag_pulso_reset_fifo</obj_property>
+      <obj_property name="ObjectShortName">flag_pulso_reset_fifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/n_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">n_reset</obj_property>
+      <obj_property name="ObjectShortName">n_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/result_tmp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result_tmp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_tmp[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/data_count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_count[4:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/resultado" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">resultado[31:0]</obj_property>
+      <obj_property name="ObjectShortName">resultado[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/fifo/mem_array" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_array[0:15,7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_array[0:15,7:0]</obj_property>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[0,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[1,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[2,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[3,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[4,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[5,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[6,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[7,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[8,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[9,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[10,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[11,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[12,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[13,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[14,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testConcat/uut/fifo/mem_array[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[15,7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/next_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
