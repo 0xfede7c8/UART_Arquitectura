@@ -5,7 +5,7 @@ module ConcatenadorNumeros
 	#( parameter stateA = 5'b00001,	//cargando datos en fifo
 		parameter stateB = 5'b00010,	//calculando datos
 		parameter stateC = 5'b00100,	//devuelvo
-		parameter stateD = 5'b01000,	
+		parameter stateD = 5'b01000,	//reseteo 
 		parameter stateE = 5'b10000)	
 		
 		(input clk, input reset, input [7:0] dato, input num_ready, input fin,
@@ -55,7 +55,7 @@ module ConcatenadorNumeros
 	/*RESET Y NEXT STATE*/
 	always@(posedge clk)
 		begin
-			if (reset) 
+			if (!reset) 
 				begin
 					next_state <= stateA;
 					flag_pulso_reset_fifo <= 1;
