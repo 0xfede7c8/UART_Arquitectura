@@ -12,8 +12,7 @@ module Main( input wire rx, clk, reset,
 	wire [7:0] d_out;
 	wire tx_start;
 	wire tx_done;
-	wire [7:0] data_out_alu;
-	wire [7:0] data_out_alu;
+	wire [7:0] d_out_ALU;
 	wire [7:0] A;
 	wire [7:0] B;
 	wire [5:0] opcode;
@@ -46,7 +45,7 @@ module Main( input wire rx, clk, reset,
 		.d_in(d_in),
 		.rx_done(rx_done),
 		.tx_done(tx_done),
-		.d_in_alu(d_in_alu),
+		.d_out_ALU(d_out_alu),
 		.d_out(d_out),
 		.tx_start(tx_start),
 		.A(A),
@@ -58,7 +57,7 @@ module Main( input wire rx, clk, reset,
 		.A(A),
 		.B(B),
 		.Opcode(opcode),
-		.Out(d_in_alu)
+		.Out(d_out_alu)
 	);
 
 endmodule

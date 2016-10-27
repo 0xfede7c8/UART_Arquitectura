@@ -14,24 +14,24 @@ Diccionario de valores:
 	Son mayusculas
 	*/
 	
-module Conv_ASCII_Opcode( input wire [7:0] ASCII,
-									output wire [7:0] opcode) );
-	
-	reg [7:0] op;
+module Conv_ASCII_Opcode( input wire [7:0] ASCII, output reg [7:0]opcode);
 	
 	always@*
-		begin
+	begin
 		case(ASCII)
-			43:  op = 8'b00100000;
-			45:  op = 8'b00100010;
-			65:  op = 8'b00100100;
-			79:  op = 8'b00100101;
-			88:  op = 8'b00100110;
-			78:  op = 8'b00100111;
-			62:  op = 8'b00000011;
-			47:  op = 8'b00000010;
-		default: op = -1;
-		end
-
-
+			43:  opcode = 'b00100000;
+			45:  opcode = 'b00100010;
+			65:  opcode = 'b00100100;
+			79:  opcode = 'b00100101;
+			88:  opcode = 'b00100110;
+			78:  opcode = 'b00100111;
+			62:  opcode = 'b00000011;
+			47:  opcode = 'b00000010;
+			default:
+			begin
+				if((ASCII<10)&&(ASCII>= 0)) opcode = ASCII-48;
+				else opcode = -1;
+			end
+		endcase
+	end
 endmodule

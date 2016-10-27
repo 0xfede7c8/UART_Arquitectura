@@ -114,7 +114,4 @@ always@(posedge baud_rate or negedge rst_count)
 		end
     end
 	
-
-
-
 endmodule
