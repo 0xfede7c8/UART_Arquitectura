@@ -34,6 +34,8 @@ module ConcatenadorNumeros
 	reg flag_dato_nuevo = 0; //flag para el estado B de ponderacion de numeros
 	
 	integer result_tmp = 0;
+	integer aux;
+	integer i;
 	
 	 //https://eewiki.net/pages/viewpage.action?pageId=20939499
 	 
@@ -65,7 +67,7 @@ module ConcatenadorNumeros
 		
 	/*CAMBIO DE ESTADOS*/
 		
-	always@(posedge clk or posedge fin)
+	always@(posedge clk)
 		begin
 			case(state)
 				stateA: 
@@ -77,8 +79,8 @@ module ConcatenadorNumeros
 							end
 					end
 				stateB: if(!flag_procesando) next_state <= stateC;
-				stateC: next_state = stateD;
-				stateD: next_state = stateA;
+				stateC: next_state <= stateD;
+				stateD: next_state <= stateA;
 			endcase
 		end
 		
@@ -117,9 +119,16 @@ module ConcatenadorNumeros
 			if(state == stateB)
 				if(flag_dato_nuevo == 1)
 				begin
-						result_tmp <= result_tmp + fifo_data_out*(10**fifo_data_count); //la magia
-						flag_dato_nuevo <= 0;
+					aux = 1;
+					for(i = 0; i<16;i=i+1)
+					begin
+						if(i<fifo_data_count) aux = aux*10;
+					end
+					result_tmp = result_tmp + fifo_data_out*aux;
+					//result_tmp <= result_tmp + fifo_data_out*(10**fifo_data_count); //la magia
+					flag_dato_nuevo = 0;
 				end
+			if(state == stateD) result_tmp = 0;	
 		end
 		
 
@@ -136,10 +145,7 @@ module ConcatenadorNumeros
 		
 		
 		
-	always@(posedge clk)
-		begin
-			if(state == stateD) result_tmp = 0;
-		end
+
 		
 /*--------MANDA PULSOS----------*/	
 	always@(posedge clk)
