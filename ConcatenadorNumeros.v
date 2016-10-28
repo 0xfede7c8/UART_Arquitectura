@@ -21,13 +21,14 @@ module ConcatenadorNumeros
 	reg fifo_rd_en = 0;			//saca por fifo_data_out lo que este en la fifo cuando viene el posedge
 	reg fifo_n_reset = 1;  //reset de la fifo. En 1 es NO RESET
 	 
-	integer state = stateA;
-	integer next_state = stateA;
+	reg [4:0] state = stateA;
+	reg [4:0] next_state = stateA;
 	
 	reg flag_fin_carga; 		//flag que indica cuando se terminaron de cargar datos
 	
 	reg flag_procesando = 0; //si estoy haciendo la cuenta
 	reg flag_dato_nuevo = 0; //flag para el estado B de ponderacion de numeros
+	reg end_proc = 0;
 	
 	integer result_tmp = 0;
 	integer aux;
@@ -60,7 +61,7 @@ module ConcatenadorNumeros
 				begin
 				if (!reset) 
 					begin
-						next_state <= stateA;
+						//next_state <= stateA;
 						fifo_n_reset <= 0;
 						res_state <= 1;
 					end
@@ -86,7 +87,11 @@ module ConcatenadorNumeros
 								next_state <= stateB;
 							end
 					end
-				stateB: if(!flag_procesando) next_state <= stateC;
+				stateB: 
+					begin
+					if(end_proc == 1) flag_procesando <= 0;
+					if(!flag_procesando) next_state <= stateC;
+					end
 				stateC: next_state <= stateD;
 				stateD: next_state <= stateA;
 			endcase
@@ -135,7 +140,11 @@ module ConcatenadorNumeros
 							fifo_rd_en <= 1;
 							rd_en_state <= 1;
 							end
-						else flag_procesando <= 0;		//cambio flag de procesamiento de datos
+						else 
+							begin
+								if(flag_procesando == 1) end_proc <= 1;
+								else end_proc <= 0;
+							end
 					end
 				end
 			if(rd_en_state == 1) 

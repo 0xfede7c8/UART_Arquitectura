@@ -15,7 +15,7 @@ module Interface
 	parameter stateI = 'b000100000000,
 	parameter stateJ = 'b001000000000,
 	parameter stateK = 'b010000000000,
-	parameter stateL = 'b010000000000)
+	parameter stateL = 'b100000000000)
   (input clk,
 	input reset,
 	input [7:0] d_in, //data que viene del RX
