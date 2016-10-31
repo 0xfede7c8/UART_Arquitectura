@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="24" />
    <wvobject fp_name="/testConcat/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -33,10 +33,6 @@
       <obj_property name="ElementShortName">fin</obj_property>
       <obj_property name="ObjectShortName">fin</obj_property>
    </wvobject>
-   <wvobject fp_name="/testConcat/uut/flag_pulso_wr_enable" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">flag_pulso_wr_enable</obj_property>
-      <obj_property name="ObjectShortName">flag_pulso_wr_enable</obj_property>
-   </wvobject>
    <wvobject fp_name="/testConcat/uut/fifo/wr_en" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">wr_en</obj_property>
       <obj_property name="ObjectShortName">wr_en</obj_property>
@@ -44,14 +40,6 @@
    <wvobject fp_name="/testConcat/uut/fifo_wr_en" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">fifo_wr_en</obj_property>
       <obj_property name="ObjectShortName">fifo_wr_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testConcat/uut/flag_pulso_rd_enable" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">flag_pulso_rd_enable</obj_property>
-      <obj_property name="ObjectShortName">flag_pulso_rd_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testConcat/uut/flag_pulso_done" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">flag_pulso_done</obj_property>
-      <obj_property name="ObjectShortName">flag_pulso_done</obj_property>
    </wvobject>
    <wvobject fp_name="/testConcat/uut/done" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">done</obj_property>
@@ -61,6 +49,10 @@
       <obj_property name="ElementShortName">fifo_rd_en</obj_property>
       <obj_property name="ObjectShortName">fifo_rd_en</obj_property>
    </wvobject>
+   <wvobject fp_name="/testConcat/uut/rd_en_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_en_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_en_state[2:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/testConcat/uut/fifo/rd_en" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rd_en</obj_property>
       <obj_property name="ObjectShortName">rd_en</obj_property>
@@ -68,6 +60,10 @@
    <wvobject fp_name="/testConcat/uut/flag_procesando" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">flag_procesando</obj_property>
       <obj_property name="ObjectShortName">flag_procesando</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testConcat/uut/end_proc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">end_proc</obj_property>
+      <obj_property name="ObjectShortName">end_proc</obj_property>
    </wvobject>
    <wvobject fp_name="/testConcat/uut/flag_dato_nuevo" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">flag_dato_nuevo</obj_property>
@@ -86,10 +82,6 @@
    <wvobject fp_name="/testConcat/reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testConcat/uut/flag_pulso_reset_fifo" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">flag_pulso_reset_fifo</obj_property>
-      <obj_property name="ObjectShortName">flag_pulso_reset_fifo</obj_property>
    </wvobject>
    <wvobject fp_name="/testConcat/uut/fifo/n_reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">n_reset</obj_property>

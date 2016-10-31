@@ -26,14 +26,14 @@ module testConcat;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		reset = 1;
+		reset = 0;
 		dato = 0;
 		num_ready = 0;
 		fin = 0;
 
 		// Wait 100 ns for global reset to finish
 		#50;
-		reset = 0;
+		reset = 1;
 		#20;
 		dato = 9; 					//1
 		#20
@@ -54,6 +54,162 @@ module testConcat;
 		num_ready = 0;		
 		#20;
 		dato = 4; 					//4
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+		dato = 9; 					//1
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+		dato = 8; 					//2
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+		dato = 1; 					//3
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;		
+		#20;
+		dato = 4; 					//4
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+		dato = 9; 					//1
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#40;
+		fin = 1;
+		#20;
+		fin=0;
+		
+		
+		
+		#800;
+		
+		
+		
+							dato = 1; 					//1
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 1; 					//2
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 1; 					//3
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;		
+		#20;
+							dato = 7; 					//4
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 7; 					//1
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 5; 					//2
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 3; 					//3
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;		
+		#20;
+							dato = 4; 					//4
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 4; 					//1
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#40;
+		fin = 1;
+		#20;
+		fin=0;
+		
+		
+		#800;
+		
+		
+							dato = 9; 					//1
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 8; 					//2
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 1; 					//3
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;		
+		#20;
+							dato = 4; 					//4
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 9; 					//1
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 8; 					//2
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 1; 					//3
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;		
+		#20;
+							dato = 4; 					//4
+		#20
+		num_ready = 1;
+		#20;
+		num_ready = 0;
+		#20;
+							dato = 9; 					//1
 		#20
 		num_ready = 1;
 		#20;

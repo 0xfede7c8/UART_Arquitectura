@@ -27,7 +27,7 @@ module Interface
 	output reg tx_start, //tx_start que va al TX
 	output reg [31:0] A, //A de la ALU
 	output reg [31:0] B, //B de la ALU
-	output reg [5:0] opcode); // opcode de la ALU
+	output reg [7:0] opcode); // opcode de la ALU
 
 	reg [11:0] state = stateA;
 	reg [11:0] next_state = stateA;
