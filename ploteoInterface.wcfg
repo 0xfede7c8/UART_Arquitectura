@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/fede/DatosWindows/Facultad/Arquitectura de Computadoras/WorkspaceXilinxIse/UART/UART_Arquitectura/testInterface_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testInterface" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/testInterface/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/d_in" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">d_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">salidaRX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/rx_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rx_done</obj_property>
+      <obj_property name="ObjectShortName">rx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/conversor/ASCII" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">ASCII[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ASCII[7:0]</obj_property>
+      <obj_property name="label">CONVERSOR ascii</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/conversor/opcode" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">opcode[7:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[7:0]</obj_property>
+      <obj_property name="label">CONVERSOR opcode</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/dato" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">dato[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato[7:0]</obj_property>
+      <obj_property name="label">CONCAT dato</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/fifo_data_in" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">fifo_data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_data_in[7:0]</obj_property>
+      <obj_property name="label">CONCAT fifodatain</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/num_ready" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">num_ready</obj_property>
+      <obj_property name="ObjectShortName">num_ready</obj_property>
+      <obj_property name="label">CONCAT num ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/fifo_wr_en" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">fifo_wr_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_wr_en</obj_property>
+      <obj_property name="label">CONCAT wr en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/fifo_data_count" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">fifo_data_count[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_data_count[4:0]</obj_property>
+      <obj_property name="label">CONCAT fifodata count</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/fin" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">fin</obj_property>
+      <obj_property name="ObjectShortName">fin</obj_property>
+      <obj_property name="label">CONCAT fin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/result_tmp" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">result_tmp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_tmp[31:0]</obj_property>
+      <obj_property name="label">CONCAT result tmp</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/resultado" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">resultado[31:0]</obj_property>
+      <obj_property name="ObjectShortName">resultado[31:0]</obj_property>
+      <obj_property name="label">CONCAT resultado</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/fifo_n_reset" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">fifo_n_reset</obj_property>
+      <obj_property name="ObjectShortName">fifo_n_reset</obj_property>
+      <obj_property name="label">CONCAT fifo reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem_array[0:31,7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_array[0:31,7:0]</obj_property>
+      <obj_property name="label">CONCAT mem array</obj_property>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[0,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[1,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[2,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[3,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[4,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[5,7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[6,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[7,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[8,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[9,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[10,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[11,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[12,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[13,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[14,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[15,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[16]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[16,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[16,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[17]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[17,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[17,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[18]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[18,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[18,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[19]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[19,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[19,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[20]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[20,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[20,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[21]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[21,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[21,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[22]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[22,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[22,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[23]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[23,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[23,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[24]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[24,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[24,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[25]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[25,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[25,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[26]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[26,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[26,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[27]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[27,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[27,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[28]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[28,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[28,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[29]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[29,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[29,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[30]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[30,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[30,7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testInterface/uut/concatenador/fifo/mem_array[31]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[31,7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_array[31,7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testInterface/A" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/alu/Out" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Out[31:0]</obj_property>
+      <obj_property name="label">ALU out</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode[7:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/tx_start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_start</obj_property>
+      <obj_property name="ObjectShortName">tx_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/tx_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/d_out_ALU" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out_ALU[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_out_ALU[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInterface/d_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_out[7:0]</obj_property>
+   </wvobject>
+</wave_config>
