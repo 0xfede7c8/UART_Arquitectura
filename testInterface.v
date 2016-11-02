@@ -9,14 +9,15 @@ module testInterface;
 	reg [7:0] d_in;
 	reg rx_done;
 	reg tx_done;
-	reg [31:0] d_out_ALU;
+
 
 	// Outputs
 	wire [7:0] d_out;
 	wire tx_start;
 	wire [31:0] A;
 	wire [31:0] B;
-	wire [5:0] opcode;
+	wire [7:0] opcode;
+	wire [31:0] d_out_ALU;
 
 	// Instantiate the Unit Under Test (UUT)
 	Interface uut (
@@ -31,6 +32,14 @@ module testInterface;
 		.A(A), 
 		.B(B), 
 		.opcode(opcode)
+	);
+	
+	
+	ALU alu(
+	.A(A),
+	.B(B),
+	.Opcode(opcode),
+	.Out(d_out_ALU)
 	);
 
 	initial begin
@@ -50,37 +59,37 @@ module testInterface;
         
 		// Add stimulus here
 		//primer dato
-		d_in = 5;
+						d_in = 53; //ascii 5
 		rx_done = 1;
 		#20;
 		rx_done = 0;
 		#20;
 		//primer dato
-		d_in = 4;
+						d_in = 56; //ascii 8
 		rx_done = 1;
 		#20;
 		rx_done = 0;
 		#20;
 		//delimitador
-		d_in = 32;
+						d_in = 32; //ascii space
 		rx_done = 1;
 		#20;
 		rx_done = 0;
 		#20;
 		//opcode
-		d_in = 43;
+						d_in = 43;	//ascii +
 		rx_done = 1;
 		#20;
 		rx_done = 0;
 		#20;
 		//segundo dato
-		d_in = 7;
+						d_in = 55;	//ascii 7
 		rx_done = 1;
 		#20;
 		rx_done = 0;
 		#20;
 		//delimitador
-		d_in = 32;
+						d_in = 32; //ascii space
 		rx_done = 1;
 		#20;
 		rx_done = 0;
