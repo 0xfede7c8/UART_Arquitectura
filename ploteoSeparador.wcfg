@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/fede/DatosWindows/Facultad/Arquitectura de Computadoras/WorkspaceXilinxIse/UART/UART_Arquitectura/testSeparador_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testSeparador" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/testSeparador/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/alu_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_in[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/start_conversion" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_conversion</obj_property>
+      <obj_property name="ObjectShortName">start_conversion</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/diez" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">diez[3:0]</obj_property>
+      <obj_property name="ObjectShortName">diez[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/nueve" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nueve[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nueve[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/ocho" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ocho[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ocho[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/siete" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">siete[3:0]</obj_property>
+      <obj_property name="ObjectShortName">siete[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/seis" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">seis[3:0]</obj_property>
+      <obj_property name="ObjectShortName">seis[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/cinco" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cinco[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cinco[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/cuatro" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cuatro[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cuatro[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/tres" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tres[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tres[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/dos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dos[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/uno" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">uno[3:0]</obj_property>
+      <obj_property name="ObjectShortName">uno[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/done_convert" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done_convert</obj_property>
+      <obj_property name="ObjectShortName">done_convert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/enviando_valor" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">enviando_valor[31:0]</obj_property>
+      <obj_property name="ObjectShortName">enviando_valor[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/done_send" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done_send</obj_property>
+      <obj_property name="ObjectShortName">done_send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/value_to_send" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">value_to_send[7:0]</obj_property>
+      <obj_property name="ObjectShortName">value_to_send[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/tx_start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_start</obj_property>
+      <obj_property name="ObjectShortName">tx_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/tx_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSeparador/uut/next_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[3:0]</obj_property>
+   </wvobject>
+</wave_config>
