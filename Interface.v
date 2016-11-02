@@ -47,11 +47,16 @@ module Interface
 	reg rx_done_state = 0;
 	reg rx_done_signal = 0;
 	
+	reg start_conversion;
+	
 	Conv_ASCII_Opcode conversor ( .ASCII(d_in_ASCII), .opcode(d_out_ASCII));
 	//CONVERSOFIFO BLABLAB (d_out_ASCII, d_out_conversor, num_ready, fin);
 	ConcatenadorNumeros concatenador(.clk(clk),.reset(reset),.dato(d_out_ASCII),
 												.num_ready(num_ready),.fin(fin),.resultado(d_out_concatenador),
 												.done(concatenador_done));
+												
+	SeparadorNumeros separador ( .alu_in(d_out_ALU), .start_conversion(start_conversion),
+										.tx_done(tx_done), .clk(clk), .value_to_send(d_out), .tx_start(tx_start));
 
 	//Un reset sincronizado con el clock y el cambio de estado
 	always@(posedge clk or negedge reset)
@@ -158,7 +163,7 @@ module Interface
 				A_end = 0;
 				num_ready = 0;
 				fin = 0;
-				tx_start = 0;
+				start_conversion = 0;
 				A_ready = 0;
 			end
 			stateB:
@@ -234,8 +239,9 @@ module Interface
 			begin
 				//aca hay que hacer la conversion al revez del dato de la ALU
 				//por ahora envio el resultado al d_out 
-				d_out = d_out_ALU;
-				tx_start = 1;
+				//d_out = d_out_ALU;
+				//tx_start = 1;
+				start_conversion = 1;
 			end
 		endcase
 	end
