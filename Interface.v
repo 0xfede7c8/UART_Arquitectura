@@ -23,8 +23,8 @@ module Interface
 	input tx_done, //tx_done que viene del TX
 	input [31:0] d_out_ALU, //dato resultado que sale de la ALU
 	
-	output reg [7:0] d_out, //d_out que va al TX
-	output reg tx_start, //tx_start que va al TX
+	output wire [7:0] d_out, //d_out que va al TX
+	output wire tx_start, //tx_start que va al TX
 	output reg [31:0] A, //A de la ALU
 	output reg [31:0] B, //B de la ALU
 	output reg [7:0] opcode); // opcode de la ALU
