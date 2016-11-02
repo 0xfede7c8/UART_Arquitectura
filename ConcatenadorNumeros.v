@@ -9,11 +9,14 @@ module ConcatenadorNumeros
 		parameter stateE = 5'b10000)	
 		
 		(input clk, input reset, input [7:0] dato, input num_ready, input fin,
-		output integer resultado = 0, output reg done = 0
+		output integer resultado, output reg done
     );
 	 
+	 initial done = 0;
+	 initial resultado = 0;
+	 
 	wire [7:0] fifo_data_out;			//salida de la fifo
-	wire [4:0] fifo_data_count;		//indica la cantidad de elementos dentro de la fifo
+	wire [5:0] fifo_data_count;		//indica la cantidad de elementos dentro de la fifo
 	wire fifo_empty;				//indica si esta vacio
 	wire fifo_full;				//indica siesta lleno
 	reg [7:0] fifo_data_in = 0;
