@@ -19,17 +19,17 @@ module Conv_ASCII_Opcode( input wire [7:0] ASCII, output reg [7:0]opcode);
 	always@*
 	begin
 		case(ASCII)
-			43:  opcode = 'b00100000;
-			45:  opcode = 'b00100010;
-			65:  opcode = 'b00100100;
-			79:  opcode = 'b00100101;
-			88:  opcode = 'b00100110;
-			78:  opcode = 'b00100111;
-			62:  opcode = 'b00000011;
-			47:  opcode = 'b00000010;
+			43:  opcode = 8'b00100000;
+			45:  opcode = 8'b00100010;
+			65:  opcode = 8'b00100100;
+			79:  opcode = 8'b00100101;
+			88:  opcode = 8'b00100110;
+			78:  opcode = 8'b00100111;
+			62:  opcode = 8'b00000011;
+			47:  opcode = 8'b00000010;
 			default:
 			begin
-				if((ASCII<10)&&(ASCII>= 0)) opcode = ASCII-48;
+				if((ASCII<=57)&&(ASCII>=48)) opcode = ASCII-48;
 				else opcode = -1;
 			end
 		endcase
