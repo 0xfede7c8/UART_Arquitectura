@@ -14,7 +14,7 @@ module Main( input wire rx, clk, reset,
 	wire [31:0] d_out_ALU;
 	wire [31:0] A;
 	wire [31:0] B;
-	wire [5:0] opcode;
+	wire [7:0] opcode;
 	
 	BaudRateGenerator baudrate (
 	.clk(clk), 
